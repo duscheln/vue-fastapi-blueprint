@@ -1,4 +1,4 @@
-This Repository houses the code for the Wix app "wix Lexoffice Sync". It provides functionality to synchronize contancts and vouchers from wix to leaxoffice
+This repository is a blueprint to combine vue and fastapi in one project. 
 
 To build the project go into the frontend directory and run 'npm run build'
 
