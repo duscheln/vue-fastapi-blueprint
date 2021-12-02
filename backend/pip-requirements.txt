@@ -1,0 +1,10 @@
+requests 
+scalpl
+fastapi
+jinja2
+aiofiles
+jwt
+pylabels
+reportlab
+gunicorn
+uvicorn
