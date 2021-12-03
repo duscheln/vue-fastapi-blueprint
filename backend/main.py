@@ -45,6 +45,19 @@ def index(request: Request):
 def helloWorld(request: Request):
     return jsonable_encoder({'text': 'Hello World'})
 
+@app.post("/startContainer")
+def startContainer(request: Request):
+    
+    # Start Container hello-world
+    import docker
+    client = docker.from_env()
+
+    client.containers.run("hello-world")
+    all_container = client.containers.list(all=True)
+    for elem in all_container: 
+        print(elem)
+    return jsonable_encoder({'status': 'true'}), 200 
+
 @app.post("/webhook")
 async def webhook(request: Request):
     import paho.mqtt.client as mqtt #import the client1

@@ -1,5 +1,6 @@
 requests 
 scalpl
+docker
 fastapi
 jinja2
 aiofiles

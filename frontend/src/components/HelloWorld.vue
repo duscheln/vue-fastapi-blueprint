@@ -33,6 +33,14 @@
           >
           Lade Text
           </v-btn>
+
+                    <v-btn
+          color="lighten-2"
+          text
+          @click="startContainer"
+          >
+          Starte Container
+          </v-btn>
         </v-row>
       </v-col>
 
@@ -48,6 +56,19 @@ import axios from 'axios';
 
     methods:{
 
+        startContainer: function(){
+
+          axios
+            .post(process.env.VUE_APP_ROOT_API + 'startContainer')
+            .then(res => {
+              console.log(res.data)
+            })
+            .catch(error => {
+              // handle error
+              console.error(error);
+            })
+
+        },
 
         testFunction: function(){
         //let urlParams = new URLSearchParams(window.location.search);
