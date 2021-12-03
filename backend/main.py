@@ -14,6 +14,7 @@ import os
 app = FastAPI()
 
 origins = [
+    "http://0.0.0.0:8000",
     "http://localhost",
     "http://localhost:8080",
     "http://localhost:8000"

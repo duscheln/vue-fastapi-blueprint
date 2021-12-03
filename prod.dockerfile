@@ -12,4 +12,5 @@ WORKDIR /usr/app/src/backend
 COPY --from=builder /usr/app/src/backend/dist /usr/app/src/backend/dist 
 RUN pip install -r pip-requirements.txt
 EXPOSE 8000
-ENTRYPOINT [ "uvicorn" ,"main:app" ,"--reload" ]
+ENTRYPOINT [ "uvicorn" ,"main:app" ,"--host", "0.0.0.0"]
+#ENTRYPOINT [ "python" ,"main.py" ]
