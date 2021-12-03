@@ -7,7 +7,7 @@ RUN npm install
 RUN npm run build 
 
 FROM python:3.8-alpine
-RUN apk install gcc
+RUN apk add gcc g++ libffi-dev
 ADD backend/ /usr/app/src/backend
 WORKDIR /usr/app/src/backend
 COPY --from=builder /usr/app/src/backend/dist /usr/app/src/backend/dist 
